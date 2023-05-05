@@ -332,33 +332,33 @@ The function starts by calling the PrefixEnergyOrderKey function to construct a 
 
 Then using the `encoding/binary` file, we serialize our transaction data and eventually call `db.Insert` passing in the context and the key and value pair. 
 
-Heres a full list of all the functions I have in this file:
-`PrefixTxKey()`: Generates a database key for a transaction using the transaction ID.
-`PrefixBalanceKey()`: Generates a database key for an account balance using the public key and asset ID.
-`PrefixAssetKey()`: Generates a database key for an asset using the asset ID.
-`PrefixEnergyOrderKey()`: Generates a database key for an energy order using the order ID.
-`CreditPrefixKey()`: Generates a database key for a credit entry using the asset ID and destination ID.
-`HeightKey()`: Generates a database key for the blockchain height.
-`IncomingWarpKeyPrefix(sourceChainID ids.ID, msgID ids.ID) []byte`: Generates a database key for an incoming warp message using the source chain ID and message ID.
-`OutgoingWarpPrefix(): Generates a database key for an outgoing warp message using the transaction id
-`StoreTransaction()`: Stores a transaction in the database, including its ID, timestamp, success status, and units.
-`GetTransaction()`: Retrieves a transaction from the database using its ID.
-`GetBalance()`: Retrieves the balance of an account for a specific asset.
-`SetBalance()`: Sets the balance of an account for a specific asset.
-`DeleteBalance()`: Deletes the balance entry of an account for a specific asset.
-`AddBalance()`: Adds an amount to the balance of an account for a specific asset.
-`SubBalance()`: Subtracts an amount from the balance of an account for a specific asset.
-`GetAssetFromState()`: Retrieves asset information from the state using a ReadState function.
-`GetAsset()`: Retrieves asset information from the database using the asset ID.
-`SetAsset()`: Stores asset information in the database, including metadata, supply, owner, and warp status.
-`SetEnergyOrder()`: Stores an energy order in the database, including its attributes such as input asset, output asset, supply, and owner.
-`GetEnergyOrder()`: Retrieves an energy order from the database using the order ID.
-`DeleteOrder()`: Deletes an energy order entry from the database using the order ID.
-`GetCreditFromState()`: Retrieves credit information from the state using a ReadState function.
-`GetCredit()`: Retrieves credit information from the database using the asset ID and destination ID.
-`SetCredit()`: Stores credit information in the database, including the amount of credit.
-`AddCredit()`: Adds an amount to the credit entry in the database.
-`SubCredit()`: Subtracts an amount from the credit entry in the database.
+Heres a full list of all the functions I have in this file:      <br />
+`PrefixTxKey()`: Generates a database key for a transaction using the transaction ID. <br />
+`PrefixBalanceKey()`: Generates a database key for an account balance using the public key and asset ID.     <br />
+`PrefixAssetKey()`: Generates a database key for an asset using the asset ID.      <br />
+`PrefixEnergyOrderKey()`: Generates a database key for an energy order using the order ID.     <br />
+`CreditPrefixKey()`: Generates a database key for a credit entry using the asset ID and destination ID.     <br />
+`HeightKey()`: Generates a database key for the blockchain height.     <br />
+`IncomingWarpKeyPrefix(sourceChainID ids.ID, msgID ids.ID) []byte`: Generates a database key for an incoming warp message using the source chain ID and message ID.     <br />
+`OutgoingWarpPrefix()`: Generates a database key for an outgoing warp message using the transaction id <br />
+`StoreTransaction()`: Stores a transaction in the database, including its ID, timestamp, success status, and units. <br />
+`GetTransaction()`: Retrieves a transaction from the database using its ID. <br />
+`GetBalance()`: Retrieves the balance of an account for a specific asset. <br />
+`SetBalance()`: Sets the balance of an account for a specific asset. <br />
+`DeleteBalance()`: Deletes the balance entry of an account for a specific asset. <br />
+`AddBalance()`: Adds an amount to the balance of an account for a specific asset. <br />
+`SubBalance()`: Subtracts an amount from the balance of an account for a specific asset. <br />
+`GetAssetFromState()`: Retrieves asset information from the state using a ReadState function. <br />
+`GetAsset()`: Retrieves asset information from the database using the asset ID. <br />
+`SetAsset()`: Stores asset information in the database, including metadata, supply, owner, and warp status. <br />
+`SetEnergyOrder()`: Stores an energy order in the database, including its attributes such as input asset, output asset, supply, and owner. <br />
+`GetEnergyOrder()`: Retrieves an energy order from the database using the order ID. <br />
+`DeleteOrder()`: Deletes an energy order entry from the database using the order ID. <br />
+`GetCreditFromState()`: Retrieves credit information from the state using a ReadState function. <br />
+`GetCredit()`: Retrieves credit information from the database using the asset ID and destination ID. <br />
+`SetCredit()`: Stores credit information in the database, including the amount of credit. <br />
+`AddCredit()`: Adds an amount to the credit entry in the database. <br />
+`SubCredit()`: Subtracts an amount from the credit entry in the database. <br />
 
 ### Controller
 There isn't a huge amount we need to change here from the boilerplate. Mostly we need to adjust the `Accepted` function's success path to include some metrics we define in an adjacent file.
@@ -465,7 +465,7 @@ For my own HyperVM journey, I have these next steps mapped out:
  2. Launch the virtually machine locally via the `avalanche-cli` 
  3. Expand the feature set of the EnergyVM
  
-As of now this code will not quite yet run. For starters, I need to include an RPC server module. If you look through my code you'll see references to it, but I have yet to finish that module. Once all the components are there I can move onto launching this on a local network. For that, I will be using the `avalanche-cli`.  Then, it will be a great time to add more features to the virtual machine. I'd like to add interfaces for IoT devices, such as energy meters or batteries, to help automate the consuming and producing energy actions on chain. You wouldn't want to have to, for instance, manually transact each time you turn on a light switch. Another feature I could see being valuable is differentiating between the type of energy. 
+As of now this code will not quite yet run. For starters, I need to include an RPC server module. If you look through my code you'll see references to it, but I have yet to finish that module. Once all the components are finalized, I can move onto launching this on a local network. For that, I will be using the `avalanche-cli`.  Then, it will be a great time to add more features to the virtual machine. I'd like to add interfaces for IoT devices, such as energy meters or batteries, to help automate the consuming and producing energy actions on chain. You wouldn't want to have to, for instance, manually transact each time you turn on a light switch. Another feature I could see being valuable is differentiating between the type of energy. 
 
 I'll go through all of this and more in my next post. In the meantime I invite you to [watch this recording](https://www.youtube.com/watch?v=dAejw4AWK8I) of Patrick O'Grady and Dr Emir Gün Sirer discussing HyperSDK. I found it quite valuable when getting started with this framework.
 
