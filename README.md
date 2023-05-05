@@ -205,7 +205,7 @@ Now, each of these actions are their own file within the `actions` folder within
     }
 
 ### Authorization
-To keep the authorization simple. I'm going to the same standard ED25519 authorization that [Avalanche provides in their `tokenvm`](https://github.com/ava-labs/hypersdk/blob/main/examples/tokenvm/auth/ed25519.go) and make a couple adjustments to account for the use case. We're going to include some attributes in the struct to account for tracking energy produced and consumed. 
+To keep the authorization simple. I'm going to use the same standard ED25519 authorization that [Avalanche provides in their `tokenvm`](https://github.com/ava-labs/hypersdk/blob/main/examples/tokenvm/auth/ed25519.go) and make a couple adjustments to account for the use case. We're going to include some attributes in the struct to account for tracking energy produced and consumed. 
 
     type  ED25519  struct {
 	    Signer crypto.PublicKey `json:"signer"`
