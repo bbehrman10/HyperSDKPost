@@ -215,7 +215,7 @@ To keep the authorization simple. I'm going to use the same standard ED25519 aut
 	    TimestampUTC time.Time `json:"timestamp_utc"`
      }
 
-I will also wrote some set functions that are responsible for setting the values of these attributes.
+I also wrote some set functions that are responsible for setting the values of these attributes.
 
     func (d *ED25519) SetConsumption(consumption float64) {
 	    d.Consumption  = consumption
