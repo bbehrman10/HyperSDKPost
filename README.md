@@ -25,8 +25,8 @@ Another state management feature of HyperSDK is dynamic state sync. Normally, wh
 
 The final piece of the state management puzzle is `PebbleDB.` Many Avalanche VM implementations use `goleveldb` for storage which ends up impacting the total throughput, but HyperSDK instead uses CockroachDBs Pebble database for on disk storage. Rather than keeping data in the AvalancheGo root directory, Pebble stores the data under a set of distinct paths in the AvalancheGo chainData directory. This structure gives us the ability to run multiple disk drives when running a HyperVM so we get access to more throughput. 
 
-For more information on these two, visit:
-[x/merkledb](https://github.com/ava-labs/avalanchego/blob/master/x/merkledb/README.md)
+For more information on these two, visit: <br />
+[x/merkledb](https://github.com/ava-labs/avalanchego/blob/master/x/merkledb/README.md)   <br />
 [PebbleDB](https://github.com/cockroachdb/pebble#advantages)
 
 ### Block Execution
