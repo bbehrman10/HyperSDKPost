@@ -469,5 +469,5 @@ As of now this code will not quite yet run. For starters, I need to include an R
 
 I'll go through all of this and more in my next post. In the meantime I invite you to [watch this recording](https://www.youtube.com/watch?v=dAejw4AWK8I) of Patrick O'Grady and Dr Emir Gün Sirer discussing HyperSDK. I found it quite valuable when getting started with this framework.
 
-Until next time,
+Until next time, <br / >
 Ben B
