@@ -73,7 +73,7 @@ However, HyperSDK does not record or index the results of these actions. Unlike 
 ### Unified Metrics & Logging
 Unified logging and metrics are also included within HyperSDK. Its logging works by collecting log data from various parts of network and consolidating it into a single, manageable stream. This log data can include everything from transaction processing times to system errors, providing a comprehensive view of a HyperChain's activities. The unified nature of this logging system makes it easier to identify patterns or issues that might otherwise be missed when data is spread across multiple, disparate logs.
 
-Phew! That was a lot of information. Let's take a moment to digest this. It's clear there's a wealth of functionality and advanced optimization techniques at work beneath the surface of HyperSDK. While intricate and fascinating, they are largely managed by HyperSDK itself freeing us from the burden of having to do it. So now we can shift our focus towards the more practical and tangible components of a HyperVM. 
+Phew! That was a lot of information. Let's take a moment to digest this. It's clear there's a wealth of functionality and advanced optimization techniques at work beneath the surface of HyperSDK. While intricate and fascinating, they are largely managed by HyperSDK itself freeing us from the burden of having to do it. Now we can shift our focus towards the more practical and tangible components of a HyperVM. 
 
 ##  Components of a HyperVM
 
