@@ -467,7 +467,7 @@ For my own HyperVM journey, I have these next steps mapped out:
  
 As of now this code will not quite yet run. For starters, I need to include an RPC server module. If you look through my code you'll see references to it, but I have yet to finish that module. Once all the components are finalized, I can move onto launching this on a local network. For that, I will be using the `avalanche-cli`.  Then, it will be a great time to add more features to the virtual machine. I'd like to add interfaces for IoT devices, such as energy meters or batteries, to help automate the consuming and producing energy actions on chain. You wouldn't want to have to, for instance, manually transact each time you turn on a light switch. Another feature I could see being valuable is differentiating between the type of energy. 
 
-I'll go through all of this and more in my next post. In the meantime I invite you to [watch this recording](https://www.youtube.com/watch?v=dAejw4AWK8I) of Patrick O'Grady and Dr Emir Gün Sirer discussing HyperSDK. I found it quite valuable when getting started with this framework.
+I'll go through all of this and more in my next post. In the meantime I invite you to [watch this recording](https://www.youtube.com/watch?v=dAejw4AWK8I) of Patrick O'Grady and Dr. Emir Gün Sirer discussing HyperSDK. I found it quite valuable when getting started with this framework.
 
 Until next time,       
 Ben B
