@@ -242,7 +242,7 @@ I will also wrote some set functions that are responsible for setting the values
 With that we can move onto the registry.
 
 ### Registry
-From here we can go into our registry directory and make a `registry.go` file. The main piece of the registry file is to "register" all the different actions and authentication methods used on your chain. We start my defining our 2 registries. Note we are using HyperSDK's provided codec & chain libraries here.
+From here we can go into our registry directory and make a `registry.go` file. The main piece of the registry file is to "register" all the different actions and authentication methods used on your chain. We start my defining our two registries. Note we are using HyperSDK's provided codec & chain libraries here.
     
     consts.ActionRegistry = codec.NewTypeParser[chain.Action, *warp.Message]()    
     consts.AuthRegistry = codec.NewTypeParser[chain.Auth, *warp.Message]()
